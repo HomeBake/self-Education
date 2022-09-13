@@ -16,17 +16,15 @@ type Node struct {
 }
 
 // Append method add new element to the end
-func (l *LinkedList) Append(n *Node) error {
+func (l *LinkedList) Append(n *Node) {
 	if l.head == nil {
 		l.head = n
-		return nil
 	}
 	node := l.head
 	for node.Next != nil {
 		node = node.Next
 	}
 	node.Next = n
-	return nil
 }
 
 // Prepend method add element to the head
